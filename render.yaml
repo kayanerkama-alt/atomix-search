@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: atomix-ai-search
+    runtime: node
+    plan: free
+
+    buildCommand: |
+      cd server
+      npm install
+
+    startCommand: |
+      cd server
+      node server.js
+
+    envVars:
+      - key: YEP_API_KEY
+        sync: false
